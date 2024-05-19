@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grid-responsive.css">
+    <script src="https://kit.fontawesome.com/f8d5c86000.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+
+    <header class="header">
+        <h2>CAFETERIA 22</h2>
+        <br>
+        <br>
+        <a href="index.html">Home</a>
+        <a href="carta.html">Nuestra Carta</a>
+        <a href="reservas.html">Reservas</a> 
+    </header>
+
+    <main class="contenido">
+        <br>
+        <br>
+        <h3 align="center">Visítanos o Comunícate con nosotros y con gusto de atenderemos!</h3>
+        <br>
+        <br>
+    </main>
+    <div class="reservas">
+        <h3>NOSOTROS</h3>
+        <br>
+        <br>
+        <!-- poner imagen de ubicacion on click mostrar mapa a la derecha-->
+        <i class="fa-solid fa-magnifying-glass-location">  C.A.B.A.</i>
+        <br>
+        <br>
+        <!-- poner imagen de telefono -->
+        <i class="fa-solid fa-mobile-screen-button">    999-999999</i>
+        <br>
+        <br>
+        <!-- poner imagen de mail -->
+        <i class="fa-regular fa-envelope"></i>
+        <p>cafeteria22@gmail.com</p>
+        <br>
+        <br>
+        <h5>Horarios:</h5>
+        <p>Lunes-Viernes: 7am - 7pm </p>
+        <br>
+        <p>Sábados: 9am - 9pm </p>
+        <br>
+        <p>Domingos: 10am - 6pm </p>
+        <br>
+
+       
+    </div>
+
+    <div class="fotoReservas">
+        <!-- poner mapa de ubicacion -->
+        <h2>Sucursales</h2>
+        <p>C.A.B.A.: <a href="https://maps.app.goo.gl/ut6XrnGLXSCwG9Gs9">Sucursal C.A.B.A</a></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.45340588814!2d-58.51569990003405!3d-34.61565476722431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43ae6018ddf%3A0x3d7f60a75bfa308a!2sEstadio%20Monumental!5e0!3m2!1ses!2sar!4v1712277265460!5m2!1ses!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+       
+    </div>
+
+    <div class="formulario">
+        <!-- poner formulario -->
+       <p>Formulario de consultas</p>
+       <br>
+       <p>Tu Nombre:</p>
+       <br>
+       <p>Tu correo electronico</p>
+       <br>
+       <p>Telefono (Opcional)</p>
+       <br>
+    </div>
+    <div class="formulario1">
+        <!-- poner formulario -->
+       <p>Formulario de consultas</p>
+       <br>
+       <p>Tu Nombre:</p>
+       <br>
+       <p>Tu correo electronico</p>
+       <br>
+       <p>Telefono (Opcional)</p>
+       <br>
+    </div>
+    <form action="https://formspree.io/f/moqgnyej" method="post">
+        <label for="nombre"></label>
+        <input type="text" maxlength="15" name="nombre" id="nombre">
+
+        <label for="edad"></label>
+        <input type="number" id="edad" name="edad">
+
+        <label for="nacimiento"></label>
+        <input type="date" id="nacimiento" name="fec_nac">
+
+        <h2>A que curso te anotaste?</h2>
+        <input type="radio" value="Python" name="opciones">FullStack Python
+        <input type="radio" value="Inicial" name="opciones">Codo a Codo Inicial
+        <input type="radio" value="Diseño" name="opciones">Diseño UX/UI
+        <input type="radio" value="Data" name="opciones">Big Data
+        <br>
+        <textarea name="" id="" cols="30" rows="10">Comentarios...</textarea>
+        <br>
+        <label for="mes">En que mes se inscribió?</label>
+        <select name="mes" id="mes">
+            <option value="" disabled selected></option>
+            <option value="Enero">Enero</option>
+            <option value="Febrero">Febrero</option>
+            <option value="Marzo">Marzo</option>
+            <option value="Abril">Abril</option>
+            <option value="Mayo">Mayo</option>
+            <option value="Junio">Junio</option>
+            <option value="Julio">Julio</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Septiembre">Septiembre</option>
+            <option value="Octubre">Octubre</option>
+            <option value="Noviembre">Noviembre</option>
+            <option value="Diciembre">Diciembre</option>
+        </select>
+        <br>
+        <input type="reset" value="Reiniciar..." name="" id="">
+        <input type="submit" value="Enviar..." name="" id="">
+    </form>
+</div>
+</body>
+</html>
