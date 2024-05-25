@@ -1,112 +1,318 @@
+
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 a {
-    color: blue; /* Color del texto del enlace */
+    color: rgb(231, 231, 235); /* Color del texto del link */
     text-decoration: none; /* Quitar subrayado */
 }
 
 /* Estilo para los enlaces cuando el ratón está encima */
 a:hover {
-    color: red; /* Cambia el color del enlace al pasar el ratón */
-    text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+    color: rgb(129, 125, 125); /* Cambia el color del enlace al pasar el mouse */
+   
 }
 
 /* Estilo para los enlaces visitados */
 a:visited {
-    color: purple; /* Cambia el color del enlace después de haber sido visitado */
+    color: #9e9b9b; /* Cambia el color del enlace después de haber sido visitado */
 }
 
 /* Estilo para los enlaces activos (cuando están siendo clicados) */
 a:active {
-    color: green; /* Cambia el color del enlace mientras se está clicando */
+    color: rgb(216, 247, 216); /* Cambia el color del enlace mientras se está clicando */
 }
 body {
-	background: #948979;
-	color: #000;
-	font-family: 'Roboto', sans-serif;
+    background: #948979;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
 }
+
+
+
 h3 {
-	/* Estilo para titulos  */
-	color: #153448;
-	box-align: center;
-	margin: 0; /* Elimina márgenes predeterminados */
+    /* Estilo para titulos  */
+    color: #153448;
+    box-align: center;
+    text-align: center ;
+    margin: 0; /* Elimina márgenes predeterminados */
     font-size: 1rem; /* Tamaño de fuente ajustable */
+}
+h2 {
+    /* Estilo para titulos  */
+    color: #153448;
+    text-align: center;
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-size: 1.5rem; /* Tamaño de fuente ajustable */
 }
 
 .contenedor {
-	width: 80%;
-	max-width: 1000px;
-	margin: 30px auto;
-	display: grid;
-	grid-gap: 0px;
-	grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-	grid-template-areas: 
-		"header header"
-		"contenido contenido"
-		"reservas fotoReservas"
-		"fotoMenu menu" 
-		"footer footer";
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-gap: 0px;
+    row-gap: 0px;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    grid-template-areas: 
+        "header header"
+        "contenido_index contenido_index"
+        "reservas fotoReservas"
+        "fotoMenu menu" 
+        "footer footer";
+} 
+
+.contenedor_contacto {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-gap: 0px;
+    row-gap: 0px;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    grid-template-areas: 
+        "header header"
+        "contenido contenido"
+        "info info_ubicacion"
+        "formulario formulario"
+        "footer footer";
 }
+/* animacion del titulo del contenido */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.texto-movimiento-circular {
+    display: inline-block;
+    animation: movimientoCircular 5s linear infinite;
+}
+
+@keyframes movimientoCircular {
+    0% {
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+
+
 
 .header {
     grid-area: header;
-	background: #153448;
-	color: #949090;
+    background: #153448;
+    color: #949090;
     padding: 30px;
-    grid-column: 1/3;
-	height: max-content;
+    display: flex; /* Activo Flexbox */
+    justify-content: space-between; /* Espaciado entre logo/título y enlaces */
+    align-items: center;
+    /* height: max-content; */
 }
-.contenido{
+.header h1 {
+    margin: 0;
+}
+.header nav {
+    display: flex;
+    gap: 10px; /* Espacio entre los enlaces */
+}
+/* Transformación al hacer hover sobre los enlaces del header*/
+.header nav a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header nav a:hover {
+    transform: scale(1.1);  /* Agranda el enlace al hacer hover */
+    color: #fff;  /* Cambia el color del texto al hacer hover */
+}
+
+.contenido {
     grid-area: contenido;
     background: #948979;
     grid-column: 1 / 3; /* La foto ocupará desde la columna 1 hasta la columna 3 (toda la fila) */
     width: 100%; /* Para asegurarse de que la imagen ocupe todo el ancho disponible */
     height: auto; /* Para mantener la proporción de la imagen */
-	align-items: center;
-	
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;  /* Animación de desvanecimiento */
+    padding: 0px;  /* se puede ajkustar */
 }
-.reservas{
+.contenido_index {
+    grid-area: contenido_index;
+    background: #948979;
+    grid-column: 1 / 3; /* La foto ocupará desde la columna 1 hasta la columna 3 (toda la fila) */
+    width: 100%; /* Para asegurarse de que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Para mantener la proporción de la imagen */
+    align-items: center;
+  
+}
+/* grid-responsive1.css */
+.reservas, .fotoReservas, .menu, .fotoMenu {
+    display: flex;
+    background: #3C5B6F;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.reservas, .menu {
+    flex-direction: column;
+}
+
+.fotoReservas img, .fotoMenu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* .reservas {
     grid-area: reservas;
     background: #3C5B6F;
     grid-column: 1/2;
-	/* padding: 20px; */
-	/* border-radius: 4px; */
-
+    grid-row: auto;
+    display: flex; /* Activo Flexbox */
+    /* padding: 20px; */
+    /* border-radius: 4px; 
 }
-.fotoReservas{
+.fotoReservas {
     grid-area: fotoReservas;
     background: #3C5B6F;
+    grid-column: 2/2;
+    grid-row: auto;
     max-width: 100%;
     height: auto;
     object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+    display: flex; /* Activo Flexbox 
 }
-
-.fotoMenu{
+.fotoMenu {
     grid-area: fotoMenu;
     background: #3C5B6F;
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    display: flex; /* Activo Flexbox 
 }
-
-.menu{
+.menu {
     grid-area: menu;
     background: #3C5B6F;
-	/* padding: 20px; */
+    display: flex; /* Activo Flexbox 
+    padding: 20px; 
 }
-.contenedor_contacto{
-	width: 80%;
-	max-width: 1000px;
-	margin: 30px auto;
-	display: grid;
-	grid-gap: 0px;
-	grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-	grid-template-areas: 
-		"header header"
-		"contenido contenido"
-		"reservas fotoReservas"
-        "formulario formulario1"
-		"footer footer";
+*/
+.nosotros {
+    grid-area: nosotros;
+    background: #3C5B6F;
+    grid-column: 1/2;
+    padding: 20px; 
+    /* border-radius: 4px; */
 }
+.formulario {
+    grid-area: formulario;
+    background: #DFD0B8;
+    max-width: 100%;
+    height: auto;
+    padding: 30px;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+.formulario1 {
+    grid-area: formulario1;
+    background: #DFD0B8;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    /* object-fit: cover; Ajusta la imagen al contenedor sin distorsionarla */
+}
+.info {
+    grid-area: info;
+    background: #3C5B6F;
+    grid-column: 1/2;
+    padding: 40px; 
+    font-size: 15px;
+    box-align:"center";
+}
+.info_ubicacion {
+    grid-area: info_ubicacion;
+    background: #3C5B6F;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+    padding: 40px; 
+}
+/* Footer */
+.footer {
+    grid-area: footer;
+    width: 100%;
+    max-width: 1000px; /* mismo ancho que el contenedor */
+    background-color: #333;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    margin: 0px auto; /* centrar footer */
+}
+
+.footer .footer-section {
+    margin: 10px 0;
+}
+
+.footer .footer-section h3 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1 rem
+}
+
+.footer .footer-section p,
+.footer .footer-section a {
+    color: rgb(233, 230, 230);
+    text-decoration: none;
+    font-size: 0.5 rem; /* Tamaño de fuente ajustable */
+    margin: 5px 0;
+}
+
+.footer .footer-section  h3 { 
+    size: 2rem;
+}
+     
+
+
+.footer .footer-section a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body{
+        background: #948979;
+    }
+    .contenedor, .contenedor_contacto {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .header,.contenido, .info, .info_ubicacion, .formulario, .footer {
+        grid-column: 1 / -1;
+    }
+    .contenido_index,.reservas, .fotoReservas, .fotoMenu, .menu {
+        grid-column: 1 / -1;
+    }
+
+    .footer {
+        width: 100%;
+        grid-row: inherit;
+    }
+   
+}
+@media only screen and (max-width: 960px){
+    /*Condición: Ancho máximo 768px, hasta 960px le aplicamos este estilo*/
+    body{
+        background-color: lightblue;
+    }
+}
+@media only screen and (max-width: 1328px){
+    /*Condición: Ancho máximo 960px, hasta 1328px le aplicamos este estilo*/
+    body{
+        background-color: rgb(90, 94, 95);
+    }
+}
+
+

@@ -1,3 +1,5 @@
+<!--El sitio web posee 4 páginas HTML 1-home, 2-contacto, 3-Menu, 4-Reservas -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,25 +11,29 @@
 
 <body>
     <div class="contenedor">
+        
         <header class="header">
-            <h2>CAFETERIA 22</h2>
+            <img src="img/logo-22cafe.png" alt="logo">
             <br>
             <br>
-            <a href="carta.html">Nuestra Carta</a>
-            <a href="reservas.html">Reservas</a>
-            <a href="contacto.html">Contacto</a>
-            
+            <nav>
+                <a  href="carta.html">NUESTRA CARTA</a>
+                <a  href="reservas.html">RESERVAS</a> 
+                <a  href="contacto.html">CONTACTO</a>
+            </nav>
         </header>
-        <main class="contenido">
-            <!-- <h1>Contenido</h1> -->
-            <img src="img/frente1.jpg" alt="frente cafeteria"class="contenido">
-            
-        </main>
+
+    
+        <div class="contenido_index">
+            <img src="img/frente1.jpg" alt="frente cafeteria"class="contenido_index">
+        </div>
 
         <div class="reservas">
-            <h3>RESERVAS</h3>
+            <!-- <div class="texto-movimiento-circular">Realizá tu reserva</div> -->
             <br>
-            <p>reservar aca va el link</p>
+            <a  href="Reservas.html">RESERVAS</a>
+
+           
         </div>
 
         <div class="fotoReservas">
@@ -36,15 +42,38 @@
 
         
         <div class="fotoMenu">
-            <img src="img/interior.jpg" alt="Mi cafeteria" class="contenido">
+            <img src="img/menu2.png" alt="Mi cafeteria" > 
         </div>
+        
         <div class="menu">
-            <h3>Nuestra Carta aca va el link</h3>
-            <p>Menu</p>
+            <!-- <div class="texto-movimiento-circular">Nuestra Carta</div> -->
+            <br>
+            <a  href="carta.html">MENU</a>
+            
         </div>
+
         <footer class="footer">
-            <h3>FOOTER</h3>
-        </footer>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: cafeteria22@gmail.com</p>
+                <p>Teléfono: 999-999999</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="contacto.html">Contacto</a> | 
+                <a href="carta.html">Nuestra Carta</a> | 
+                <a href="reservas.html">Reservas</a>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </footer> 
+
+
+        
     </div>
 </body>
 </html>
