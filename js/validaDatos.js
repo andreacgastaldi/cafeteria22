@@ -15,6 +15,8 @@ function validar_Formulario(){
     }
 
     // formato del email
+    /*if(email.lenght<=2){ */
+    
     if (!emailRegex.test(email)){
         document.formulario.email.focus();
         parrafo.innerHTML = " direccion de e-mail es inválida";
