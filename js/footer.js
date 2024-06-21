@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <h3>Enlaces Rápidos</h3>
             <a href="index.html">Home</a> | 
             <a href="carta.html">Nuestra Carta</a> | 
-            <a href="reservas.html">Reservas</a>
+            <a href="contacto.html">Contacto</a> | 
+            <a href="nosotros.html">Nosotros</a>
         </div>
         <div class="footer-section">
             <h3>Síguenos</h3>

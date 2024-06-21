@@ -43,5 +43,6 @@ function validar_Formulario(){
     // }
 
     parrafo.innerHTML= "";  // limpiar mensaje de error previo
-    return true;
+
+    return document.formulario.submit();
 }

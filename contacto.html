@@ -33,6 +33,7 @@ Pasó la validación de https://validator.w3.org/ sin errores:
                 <a  href="index.html">HOME</a>
                 <a  href="carta.html">NUESTRA CARTA</a>
                 <a  href="nosotros.html">NOSOTROS</a> 
+                <a  href="contacto.html">CONTACTO</a> 
             </nav>
         </header>
        
@@ -125,38 +126,21 @@ Pasó la validación de https://validator.w3.org/ sin errores:
                     <br>
                     <p id="error" style="color: red;"></p>
                     <br>
-                    <input type="submit" id="boton" value=" Enviar Consulta" onclick="validar_Formulario()">
+                    <input type="button" id="boton" value=" Enviar Consulta" onclick="validar_Formulario()">
                 </form>
                 
                 
             </div> 
            
-
-
-            <footer class="footer">
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p>Email: cafeteria22@gmail.com</p>
-                    <p>Teléfono: 999-999999</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <a href="index.html">Home</a> | 
-                    <a href="carta.html">Nuestra Carta</a> | 
-                    <a href="nosotros.html">Nosotros</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Síguenos</h3>
-                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                </div>
-            </footer> 
-       
-
    
     </div>
     <script src="js/validaDatos.js"></script>
-    <!-- <script src="footer.js"></script> -->
+    <script src="js/footer.js"></script> 
 </body>
 </html>
+- El formulario no valida bien con javascript ya que la etiqueta input de envío tiene 
+el atributo type="submit" (entonces se "sube" o envía a formspree sin llegar a analizar nada), 
+fijense de cambiar el type a "button" y que en el archivo de javascript, cuando todos los 
+datos son correctos, en vez de return true tener la linea document.formulario.submit()
+
+

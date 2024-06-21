@@ -27,6 +27,7 @@ body {
     background: #948979;
     color: #000;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 
@@ -78,20 +79,7 @@ h2 {
         "formulario formulario"
         "footer footer";
 }
-.contenedor_carta {
-    width: 80%;
-    max-width: 1000px;
-    margin: 30px auto;
-    display: grid;
-    grid-gap: 0px;
-    row-gap: 0px;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-    grid-template-areas: 
-        "header header"
-        "contenido_carta contenido_carta"
-        "menuItem menuItem"
-        "footer footer";
-}
+
 .contenedor_nosotros{
     width: 80%;
     max-width: 1000px;
@@ -122,13 +110,14 @@ h2 {
 }
 
 /* animacion del titulo del contenido */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 .texto-movimiento-circular {
     display: inline-block;
-    animation: movimientoCircular 5s linear infinite;
+    animation: movimientoCircular 15s linear infinite;
 }
 
 @keyframes movimientoCircular {
@@ -188,25 +177,7 @@ h2 {
     align-items: center;
   
 }
- .contenido_carta {
-    grid-area: contenido_carta;
-    /* background: #948979; */
-    grid-column: 1 / 3; /* De la columna 1 hasta la columna 3 (toda la fila) */
-    width: 100%; /* Para asegurarse de que ocupe todo el ancho disponible */
-    height: 40vh; /* Para mantener la proporción de la imagen */
-    align-items: center;
-    display: flex;
-    background-image: url("frente1.jpg");
-    font-size: 2em;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: justify;
  
-
-   
-
-} 
-
 
 .reservas, .fotoReservas, .menu, .fotoMenu {
     display: flex;
@@ -250,18 +221,7 @@ h2 {
     padding: 20px;
     /* object-fit: cover; Ajusta la imagen al contenedor sin distorsionarla */
 }
-.menuItem {
-    grid-area: menuItem;
-    background: #3C5B6F;
-    grid-column: 1/3;
-    padding: 20px 0px;  /* arriba derecha abajo izquierda */
-    font-size: 15px;
-    text-align: center;
-    box-align:"center";
-    width: 100%; /* Para asegurarse de que ocupe todo el ancho disponible */
-    height: auto; /* Para mantener la proporción de la imagen */
-   
-}
+
 .info {
     grid-area: info;
     background: #3C5B6F;
